@@ -61,7 +61,6 @@ createHouse.onclick = () => {
         .then(data => {
             alertBox(data.name);
         }).then(() => {
-
             fetch('/house-get', {
                 method: 'POST',
                 headers: {
