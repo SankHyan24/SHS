@@ -2,7 +2,12 @@ import * as THREE from 'three';
 
 import Stats from 'three/addons/libs/stats.module.js';
 
-
+// todo:
+//  add new cube type(light, door, window, etc.)
+//  add a control panel to control the type information
+//      learn from this: https://github.com/mrdoob/three.js/blob/master/examples/webgl_camera_cinematic.html
+//  add the data get and render part
+//  add the data save part
 
 
 let camera, scene, renderer, stats, container;
