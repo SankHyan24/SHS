@@ -40,7 +40,7 @@
   <div id="demo">
     <div id="search" class="forms2">
       <h1 class="heading2">Search</h1>
-      <input name="query" v-model="searchQuery">
+      <input name="query" placeholder="name to search" v-model="searchQuery">
     </div>
     <demo-grid :data="gridData" :columns="gridColumns" :filter-key="searchQuery">
     </demo-grid>
