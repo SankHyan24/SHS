@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ChuanCraft</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+
+    <div id="info">
+        <strong>click</strong>: add voxel, <strong>shift + click</strong>: remove voxel <br>
+        <strong>W</strong>: change type+, <strong>S</strong>: change type- <br>
+        <strong>A</strong>: Rotate the camera to the left, <strong>D</strong>: Rotate the camera to the right<br>
+        <strong>Q</strong>: Zoom in, <strong>E</strong>: Zoom out <br>
+    </div>
+
+    <!-- Import maps polyfill -->
+    <!-- Remove this when import maps will be widely supported -->
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+    <script type="importmap">{
+        "imports": {
+                "three": "https://cdn.skypack.dev/three@0.122.0",
+                "three/addons/": "https://cdn.skypack.dev/three@0.122.0/examples/jsm/"
+            }
+        }	
+    </script>
+    <script type="module" src="js/room.js"></script>
+
+</body>
+
+</html>
