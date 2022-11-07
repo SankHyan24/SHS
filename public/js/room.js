@@ -10,6 +10,13 @@ import Stats from 'three/addons/libs/stats.module.js';
 //  add the data save part
 
 
+// todo: 2.0
+//  先把方块替换成其他实体（按钮等）
+//  添加从后端获取数据的功能。并初始化到场景中
+//  添加保存数据的功能
+// 添加控制面板，控制物体的类型
+
+
 let camera, scene, renderer, stats, container;
 let plane;
 let pointer, raycaster, isShiftDown = false;
@@ -61,6 +68,7 @@ function init() {
         textures[i].map.repeat.set(1, 1.0 / 11);
         textures[i].map.offset.set(0, 1.0 * i / 11);
     }
+    // 在这里获取服务器传来的数据，然后渲染到场景中。主要是物体的信息
 
 
     // grid
@@ -101,6 +109,9 @@ function init() {
     //
 
     window.addEventListener('resize', onWindowResize);
+
+
+
 
 }
 
