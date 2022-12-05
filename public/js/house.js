@@ -14,33 +14,36 @@ form2.forEach((item, i) => {
 })
 
 
+const updateHouseFrom = () => {
+    fetch('/house-get', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            email: sessionStorage.email,
+            password: sessionStorage.password
+        })
+    })
+        .then(res => res.json())
+        .then(data => {
+            if (data == 'You Are Not Logged In!')
+                alertBox(data);
 
+            data = data.map(item => {
+                return {
+                    'House Name': item.h_name,
+                    'House Type': type_id_to_name(item.h_type)
+                }
+            })
+            vm.gridData = data;
+        })
+}
 window.onload = () => {
     if (!sessionStorage.name) {
         location.href = '/';
     } else {
-        document.title = `hello ${sessionStorage.name}`;
-        fetch('/house-get', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: sessionStorage.email
-            })
-        })
-            .then(res => res.json())
-            .then(data => {
-                // update the house list, use vue
-                data = data.map(item => {
-                    return {
-                        'House Name': item.h_name,
-                        'House Type': type_id_to_name(item.h_type)
-                    }
-                })
-                console.log(data);
-                vm.gridData = data;
-            })
+        updateHouseFrom();
     }
 }
 
@@ -59,28 +62,8 @@ createHouse.onclick = () => {
     })
         .then(res => res.json())
         .then(data => {
-            alertBox(data.name);
+            alertBox(data.name + " added successfully!");
         }).then(() => {
-            fetch('/house-get', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: sessionStorage.email
-                })
-            })
-                .then(res => res.json())
-                .then(data => {
-                    // update the house list, use vue
-                    data = data.map(item => {
-                        return {
-                            'House Name': item.h_name,
-                            'House Type': type_id_to_name(item.h_type)
-                        }
-                    })
-                    console.log(data);
-                    vm.gridData = data;
-                })
+            updateHouseFrom(); 
         })
 }

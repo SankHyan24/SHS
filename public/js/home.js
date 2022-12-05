@@ -1,11 +1,10 @@
 const greeting = document.querySelector('.greeting');
 
 window.onload = () => {
-    if(!sessionStorage.name){
+    if (!sessionStorage.name) {
         location.href = '/login';
-    } else{
+    } else {
         greeting.innerHTML = `hello ${sessionStorage.name}`;
-
     }
 }
 
@@ -16,19 +15,19 @@ logOut.onclick = () => {
     location.reload();
 }
 
-const intoHouse=document.querySelector('.greeting');
+const intoHouse = document.querySelector('.greeting');
 
-intoHouse.onclick=()=>{
-    location.href='/house';
-    fetch('/house-get', {
-        method: 'POST',
-        headers: new Headers({'Content-Type': 'application/json'}),
-        body: JSON.stringify({
-            email: sessionStorage.email,
-        })
-    })
-    .then(res => res.json())
-    .then(data => {
-        alertBox(data.name);
-    })
+intoHouse.onclick = () => {
+    location.href = '/house';
+    // fetch('/house-get', {
+    //     method: 'POST',
+    //     headers: new Headers({ 'Content-Type': 'application/json' }),
+    //     body: JSON.stringify({
+    //         email: sessionStorage.email,
+    //     })
+    // })
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         alertBox(data.name);
+    //     })
 }

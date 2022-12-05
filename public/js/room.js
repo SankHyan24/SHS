@@ -69,6 +69,11 @@ function init() {
         textures[i].map.offset.set(0, 1.0 * i / 11);
     }
     // 在这里获取服务器传来的数据，然后渲染到场景中。主要是物体的信息
+    //
+    //
+    //
+    //
+
 
 
     // grid

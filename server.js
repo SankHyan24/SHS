@@ -1,10 +1,10 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const knex = require('knex');
 //
 const login = require('./apps/login');
 const house = require('./apps/house');
+const util = require('./lib/util');
 //
 
 
