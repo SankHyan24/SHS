@@ -68,7 +68,7 @@ module.exports = {
             .then(data => {
                 user_id = data[0].id;
                 if (data.length) {
-                    db.select('h_name', 'h_type')
+                    db.select('h_name', 'h_type', 'hid')
                         .from('houses')
                         .where({
                             belong_to: user_id
@@ -78,7 +78,8 @@ module.exports = {
                             data = data.map(item => {
                                 return {
                                     h_name: item.h_name,
-                                    h_type: item.h_type
+                                    h_type: item.h_type,
+                                    hid: item.hid
                                 }
                             })
                             console.log(data);
