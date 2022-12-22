@@ -40,11 +40,14 @@
   <div id="demo">
     <div id="search" class="forms2">
       <h1 class="heading2">Search</h1>
-      <input name="query" placeholder="name to search" v-model="searchQuery">
+      <input name="query" placeholder="name to search" class="select_h_name" v-model="searchQuery">
     </div>
+    <button class="select-btn">Select!</button>
     <demo-grid :data="gridData" :columns="gridColumns" :filter-key="searchQuery">
     </demo-grid>
   </div>
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
   <script src="js/houseinfo.js">  </script>

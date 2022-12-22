@@ -5,30 +5,80 @@
     <title>ChuanCraft</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/room.css">
+    <script type="text/javascript" src="https://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body scroll=no>
 
-    <div id="info">
-        <strong>click</strong>: add voxel, <strong>shift + click</strong>: remove voxel <br>
-        <strong>W</strong>: change type+, <strong>S</strong>: change type- <br>
-        <strong>A</strong>: Rotate the camera to the left, <strong>D</strong>: Rotate the camera to the right<br>
-        <strong>Q</strong>: Zoom in, <strong>E</strong>: Zoom out <br>
+    <div class="alert-box">
+        <p class="alert"></p>
     </div>
+    <div id="background">
+        <div class="info">
+            <strong id="x"></strong>, <strong id="y"></strong>, <strong id="z"></strong> <br>
+            <strong>click</strong>: add voxel, <strong>shift + click</strong>: remove voxel <br>
+            <strong>W</strong>: change type+, <strong>S</strong>: change type- <br>
+            <strong>A</strong>: Rotate the camera to the left, <br>
+            <strong>D</strong>: Rotate the camera to the right<br>
+            <strong>Q</strong>: Zoom in, <strong>E</strong>: Zoom out <br>
+            <button class="save-btn">保存并退出</button>
+            <button class="mode-btn">进入浏览模式</button>
+        </div>
+        <div class="param_padle">
+            <div class="params">
+                <div id="room_name_title"></div>
+                <div id="room_param_title">智能设备参数</div>
+                <div class="param_content">
+                    <div id="room_param_type">请选择一个设备</div>
+                    <div class="param_type_0">
+                        <input type="text" id="param_0_is_open" placeholder="请输入参数">
+                        <input type="text" id="param_0_brightness" placeholder="请输入参数">
+                    </div>
+                    <div class="param_type_1">
+                        <input type="text" id="param_1_is_open" placeholder="请输入参数">
+                    </div>
+                    <div class="param_type_2">
+                        <input type="text" id="param_2_temperature" placeholder="请输入参数">
+                        <input type="text" id="param_2_humidity" placeholder="请输入参数">
 
+                    </div>
+                    <div class="param_type_3">
+                        <input type="text" id="param_3_is_open" placeholder="请输入参数">
+                        <input type="text" id="param_3_lock_passwd" placeholder="请输入参数">
+                    </div>
+                    <button class="param_btn">更新参数</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="edit-window">
+            <input type="text" id="edit-input" placeholder="请输入房间名">
+            <button>确定</button>
+        </div> -->
+
+        <script type="importmap">{
+            "imports": {
+                    "three": "https://cdn.skypack.dev/three@0.122.0",
+                    "three/addons/": "https://cdn.skypack.dev/three@0.122.0/examples/jsm/"
+                }
+            }	
+        </script>
+        <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    </div>
     <!-- Import maps polyfill -->
     <!-- Remove this when import maps will be widely supported -->
-    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 
-    <script type="importmap">{
-        "imports": {
-                "three": "https://cdn.skypack.dev/three@0.122.0",
-                "three/addons/": "https://cdn.skypack.dev/three@0.122.0/examples/jsm/"
-            }
-        }	
-    </script>
+
+
+
+
+
+
     <script type="module" src="js/room.js"></script>
-
+    <script type="module" src="js/roominfo.js"></script>
+    <script src="js/util.js"></script>
 </body>
 
 </html>

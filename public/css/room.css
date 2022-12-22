@@ -1,0 +1,60 @@
+/* find by id:info */
+#background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.info {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 350px;
+    height: 160px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.param_padle {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 400px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    display: none;
+}
+
+
+.param_type_0 {
+    display: none;
+}
+
+.param_type_1 {
+    display: none;
+}
+
+.param_type_2 {
+    display: none;
+}
+
+.param_type_3 {
+    display: none;
+}
+
+.param_btn {
+    display: none;
+}
+
+
+
+/* body::-webkit-scrollbar {
+    width: 0px;
+} */

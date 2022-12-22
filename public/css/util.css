@@ -1,8 +1,8 @@
-.alert-box{
+.alert-box {
     position: absolute;
     top: -100%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
     min-width: 150px;
     max-width: 90%;
     width: auto;

@@ -1,6 +1,6 @@
 const form1 = [...document.querySelector('.forms').children];
 const form2 = [...document.querySelector('.forms2').children];
-
+var house_datas = [];
 form1.forEach((item, i) => {
     setTimeout(() => {
         item.style.opacity = 1;
@@ -29,7 +29,13 @@ const updateHouseFrom = () => {
         .then(data => {
             if (data == 'You Are Not Logged In!')
                 alertBox(data);
-
+            data_with_id = data.map(item => {
+                return {
+                    'House Name': item.h_name,
+                    'House Type': item.h_type,
+                    'House ID': item.hid
+                }
+            })
             data = data.map(item => {
                 return {
                     'House Name': item.h_name,
@@ -37,6 +43,8 @@ const updateHouseFrom = () => {
                 }
             })
             vm.gridData = data;
+            house_datas = data_with_id;
+            console.log(house_datas);
         })
 }
 window.onload = () => {
@@ -64,6 +72,19 @@ createHouse.onclick = () => {
         .then(data => {
             alertBox(data.name + " added successfully!");
         }).then(() => {
-            updateHouseFrom(); 
+            updateHouseFrom();
         })
+}
+
+const selectHouse = document.querySelector('.select-btn');
+selectHouse.onclick = () => {
+    let h_name = document.querySelector('.select_h_name').value;
+    let houses = vm.gridData;
+    // if h_name in houses
+    if (houses.some(item => item['House Name'] == h_name)) {
+        sessionStorage.h_name = h_name;
+        location.href = '/room';
+    } else {
+        alertBox('House Not Found!');
+    }
 }
