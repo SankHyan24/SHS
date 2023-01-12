@@ -17,12 +17,12 @@
     </div>
     <div id="background">
         <div class="info">
-            <strong id="x"></strong>, <strong id="y"></strong>, <strong id="z"></strong> <br>
-            <strong>click</strong>: add voxel, <strong>shift + click</strong>: remove voxel <br>
-            <strong>W</strong>: change type+, <strong>S</strong>: change type- <br>
-            <strong>A</strong>: Rotate the camera to the left, <br>
-            <strong>D</strong>: Rotate the camera to the right<br>
-            <strong>Q</strong>: Zoom in, <strong>E</strong>: Zoom out <br>
+            <strong id="x"></strong>, <strong id="y"></strong>, <strong id="z"></strong><strong id="z"></strong> <br>
+            <strong>click</strong>: 增加实体, <strong>shift + click</strong>: 删除实体 <br>
+            <strong>W</strong>: 下一个种类+, <strong>S</strong>: 上一个种类- <br>
+            <strong>A</strong>: 相机左移, <br>
+            <strong>D</strong>: 相机右移<br>
+            <strong>Q</strong>: 视角拉近, <strong>E</strong>: 视角拉远 <br>
             <button class="save-btn">保存并退出</button>
             <button class="mode-btn">进入浏览模式</button>
         </div>
@@ -33,19 +33,26 @@
                 <div class="param_content">
                     <div id="room_param_type">请选择一个设备</div>
                     <div class="param_type_0">
-                        <input type="text" id="param_0_is_open" placeholder="请输入参数">
+                        <strong>是否打开：</strong>
+                        <input type="text" id="param_0_is_open" placeholder="请输入参数"><br>
+                        <strong>灯光亮度：</strong>
                         <input type="text" id="param_0_brightness" placeholder="请输入参数">
                     </div>
                     <div class="param_type_1">
+                        <strong>开关是否打开：</strong>
                         <input type="text" id="param_1_is_open" placeholder="请输入参数">
                     </div>
                     <div class="param_type_2">
-                        <input type="text" id="param_2_temperature" placeholder="请输入参数">
+                        <strong>传感器温度：</strong>
+                        <input type="text" id="param_2_temperature" placeholder="请输入参数"><br>
+                        <strong>传感器湿度：</strong>
                         <input type="text" id="param_2_humidity" placeholder="请输入参数">
 
                     </div>
                     <div class="param_type_3">
-                        <input type="text" id="param_3_is_open" placeholder="请输入参数">
+                        <strong>锁是否打开：</strong>
+                        <input type="text" id="param_3_is_open" placeholder="请输入参数"><br>
+                        <strong>密码：</strong>
                         <input type="text" id="param_3_lock_passwd" placeholder="请输入参数">
                     </div>
                     <button class="param_btn">更新参数</button>
