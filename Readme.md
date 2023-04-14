@@ -1,4 +1,9 @@
-# **3200105788 孙川 智能家居管理系统**
+# SHS - Smart Home System
+Course project of B/S Software design course in ZJU.
+
+Use **Express** as backend framework, and **three.js** and **VUE** in frontend.
+
+# ** 智能家居管理系统**
 
 # A 设计文档
 
@@ -299,4 +304,4 @@ npm install
 
 Once you clone it make sure you run 'npm install' command to install all libraries mention in package.json file.
 
-use `npm start`
+Use `npm start` to run website in server.
