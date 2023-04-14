@@ -3,7 +3,7 @@ Course project of B/S Software design course in ZJU.
 
 Use **Express** as backend framework, and **three.js** and **VUE** in frontend.
 
-# ** 智能家居管理系统**
+# 智能家居管理系统
 
 # A 设计文档
 
