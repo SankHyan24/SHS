@@ -139,9 +139,17 @@ function onWindowResize() {
 }
 
 function updateWindow(x, y, z) {
-    document.getElementById("x").innerHTML = x;
-    document.getElementById("y").innerHTML = y;
-    document.getElementById("z").innerHTML = z;
+    // document.getElementById("x").innerHTML = x;
+    // document.getElementById("y").innerHTML = y;
+    // document.getElementById("z").innerHTML = z;
+    var strrr;
+    if (counter_0 < 4) {
+        strrr = items_type_mapper_cn[counter_0];
+    }
+    else {
+        strrr = "墙" + (counter_0 - 3);
+    }
+    document.getElementById("zxc").innerHTML = strrr;
 }
 
 function onPointerMove(event) {
@@ -354,6 +362,7 @@ function onDocumentKeyUp(event) {
             turnRotate = false;
             break;
     }
+    updateWindow(0, 0, 0);
 }
 
 

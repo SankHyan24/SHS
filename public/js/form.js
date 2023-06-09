@@ -24,19 +24,9 @@ const submitBtn = document.querySelector('.submit-btn');
 if (name == null) { // means login page is open
     submitBtn.addEventListener('click', () => {
         // name must be > 6 string
-        if (email.value.length < 6) {
-            alertBox('Email must be greater than 6 characters');
-            return;
-        }
-        if (document.querySelector('.name').value.length < 6) {
-            alertBox('Name must be greater than 6 characters');
-            return;
-        }
-        // 不完整：
 
-        if (document.querySelector('.name').value == "" || document.querySelector('.emall').value == "") {
-            alertBox('Name or Email must be filled');
-        }
+
+        // 不完整：
 
         fetch('/login-user', {
             method: 'post',
