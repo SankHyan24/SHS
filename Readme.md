@@ -55,18 +55,6 @@ Use **Express** as backend framework, and **three.js** and **VUE** in frontend.
    2. 其相关交互的具体实现细节，在apps目录下。
    3. 这里我们使用`knex`作为与MySQL间的接口：
 
-   ```javascript
-   const db = knex({
-       client: 'mysql',
-       connection: {
-           host: 'sc.scitbb.top',
-           user: 'sunc',
-           password: '',// 略去
-           database: 'BS'
-       }
-   })
-   ```
-
 2. 框架：`Express`（后端框架）、`three.js`（前端渲染管线）等
 3.  由于找不到合适的3D模型，这里面的不同的智能家居设备，我都使用不同纹理的立方体进行表示。
 
