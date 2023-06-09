@@ -12,6 +12,7 @@ const util = require('./lib/util');
 const app = express();
 
 let intialPath = path.join(__dirname, "public");
+console.log(intialPath);
 
 app.use(bodyParser.json());
 app.use(express.static(intialPath));

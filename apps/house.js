@@ -3,10 +3,10 @@ const util = require('../lib/util');
 const db = knex({
     client: 'mysql',
     connection: {
-        host: 'sc.scitbb.top',
-        user: 'sunc',
-        password: 'sunc',
-        database: 'BS'
+        host: '****',
+        user: '****',
+        password: '****',
+        database: '****'
     }
 })
 
